@@ -1,0 +1,65 @@
+#单节点配置如下
+server:
+  port: 7000
+spring:
+  application:
+    name: lab-eureka
+eureka:
+  instance:
+    hostname: 127.0.0.1
+  client:
+    # 是否向注册中心注册
+    register-with-eureka: false
+    # 是否查找注册中心的地址
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:${server.port}/eureka
+  server:
+    response-cache-update-interval-ms: 3000
+    eviction-interval-timer-in-ms: 3000
+
+#多节点配置如下
+#---
+#server:
+#  port: 7000
+#spring:
+#  application:
+#    name: lab-eureka
+#  profiles: server1
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7001/eureka/,http://localhost:7002/eureka/
+#
+#---
+#server:
+#  port: 7001
+#spring:
+#  application:
+#    name: lab-eureka
+#  profiles: server2
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7000/eureka/,http://localhost:7002/eureka/
+#
+#---
+#server:
+#  port: 7002
+#spring:
+#  application:
+#    name: lab-eureka
+#  profiles: server3
+#eureka:
+#  instance:
+#    hostname: localhost
+#    prefer-ip-address: false
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:7001/eureka/,http://localhost:7000/eureka/
