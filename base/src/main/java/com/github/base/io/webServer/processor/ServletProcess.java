@@ -1,6 +1,7 @@
 package com.github.base.io.webServer.processor;
 
-import io.webServer.connector.*;
+
+import com.github.base.io.webServer.connector.*;
 
 import javax.servlet.Servlet;
 import java.io.File;
@@ -52,5 +53,4 @@ public class ServletProcess {
             e.printStackTrace();
         }
     }
-//    D:\Develop\Java\Research\src\io\webServer\webroot\servlet\TimeServlet.java
 }

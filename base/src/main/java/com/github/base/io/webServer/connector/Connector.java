@@ -1,7 +1,7 @@
 package com.github.base.io.webServer.connector;
 
-import io.webServer.processor.ServletProcess;
-import io.webServer.processor.StaticProcessor;
+import com.github.base.io.webServer.processor.ServletProcess;
+import com.github.base.io.webServer.processor.StaticProcessor;
 
 import java.io.Closeable;
 import java.io.IOException;

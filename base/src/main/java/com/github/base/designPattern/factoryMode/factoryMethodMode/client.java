@@ -1,6 +1,7 @@
 package com.github.base.designPattern.factoryMode.factoryMethodMode;
 
-import designPattern.factoryMode.simpleFactoryMode.Operation;
+
+import com.github.base.designPattern.factoryMode.simpleFactoryMode.Operation;
 
 /**
  * Created By Q.Hao

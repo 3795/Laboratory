@@ -1,7 +1,8 @@
 package com.github.base.io.webServer.processor;
 
-import io.webServer.connector.Request;
-import io.webServer.connector.Response;
+
+import com.github.base.io.webServer.connector.Request;
+import com.github.base.io.webServer.connector.Response;
 
 /**
  * 静态文件的处理器
