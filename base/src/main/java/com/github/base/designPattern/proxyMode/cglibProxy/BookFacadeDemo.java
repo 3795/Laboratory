@@ -8,8 +8,8 @@ package com.github.base.designPattern.proxyMode.cglibProxy;
 public class BookFacadeDemo {
 
     public static void main(String[] args) {
-        BookFacadeCglib cglib=new BookFacadeCglib();
-        BookFacade bookCglib=(BookFacade)cglib.getInstance(new BookFacade());
+        BookFacadeCglib cglib = new BookFacadeCglib();
+        BookFacade bookCglib = (BookFacade) cglib.getInstance(new BookFacade());
         bookCglib.addBook();
     }
 }
