@@ -4,7 +4,7 @@ package com.github.base.offer;
  * 斐波那契数列
  * 链接：https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/
  */
-public class Offer10 {
+public class Offer10_1 {
 
     /**
      * 解法一：递归法。缺点：大量的重复递归计算，容易超出时间限制
