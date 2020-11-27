@@ -1,5 +1,7 @@
 package com.github.base.offer;
 
+import com.github.base.offer.common.ListNode;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -71,11 +73,3 @@ public class Offer06 {
 }
 
 
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        this.val = x;
-    }
-}
