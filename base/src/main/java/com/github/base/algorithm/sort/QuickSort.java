@@ -12,6 +12,7 @@ public class QuickSort {
 
     /**
      * 进行partition操作
+     *
      * @param arr
      * @param l
      * @param r
@@ -21,7 +22,7 @@ public class QuickSort {
         int e = arr[l];
         int j = l;
 
-        for (int i=l+1; i<r; i++) {
+        for (int i = l + 1; i < r; i++) {
             if (arr[i] < e) {
                 swap(arr, ++j, i);
             }
@@ -37,7 +38,7 @@ public class QuickSort {
 
         int p = partition(arr, l, r);
         sort(arr, l, p);        // 对左边部分进行递归排序
-        sort(arr, p+1, r);      // 对右边部分进行递归排序
+        sort(arr, p + 1, r);      // 对右边部分进行递归排序
     }
 
     public static void sort(int[] arr) {
@@ -47,7 +48,7 @@ public class QuickSort {
     public static void main(String[] args) {
         int[] arr = {5, 3, 2, 0, 9};
         sort(arr);
-        for(int i : arr)
+        for (int i : arr)
             System.out.println(i);
     }
 }
