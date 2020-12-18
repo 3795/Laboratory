@@ -6,6 +6,7 @@ import static com.github.base.algorithm.sort.Util.swap;
 /**
  * Created By Seven.wk
  * Description: 快速排序
+ * 时间复杂度：最好O(nlogn),最坏是对有序数组进行快排，O(n^2)
  * Created At 2018/11/12
  */
 public class QuickSort {
@@ -41,13 +42,39 @@ public class QuickSort {
         sort(arr, p + 1, r);      // 对右边部分进行递归排序
     }
 
+    private static int partition1(int[] arr, int l, int r) {
+        int e = arr[l];
+        int j = l;
+        for (int i = l + 1; i < arr.length; i++) {
+            if (arr[i] < e) {
+                swap(arr, ++j, i);
+            }
+        }
+        swap(arr, l, j);
+        return j;
+    }
+
+    private static void sort1(int[] arr, int l, int r) {
+        if (l >= r) {
+            return;
+        }
+
+        int p = partition1(arr, l, r);
+        sort1(arr, l, p);
+        sort1(arr, p + 1, r);
+    }
+
     public static void sort(int[] arr) {
         sort(arr, 0, arr.length);
     }
 
+    public static void sort1(int[] arr) {
+        sort1(arr, 0, arr.length);
+    }
+
     public static void main(String[] args) {
         int[] arr = {5, 3, 2, 0, 9};
-        sort(arr);
+        sort1(arr);
         for (int i : arr)
             System.out.println(i);
     }

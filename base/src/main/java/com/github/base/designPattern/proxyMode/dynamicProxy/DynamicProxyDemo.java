@@ -13,7 +13,6 @@ public class DynamicProxyDemo {
         DynamicProxyHandler dynamicProxyHandler = new DynamicProxyHandler(c);
         ProxyClass proxyClass = (ProxyClass) dynamicProxyHandler.newProxyInstance();
 //        System.out.println(proxyClass.getClass().getName());
-        System.out.println(proxyClass.doSomething(111));
-        System.out.println(proxyClass.test("字符串"));
+        System.out.println("返回结果为 " + proxyClass.doSomething(111));
     }
 }

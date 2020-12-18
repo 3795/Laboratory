@@ -9,5 +9,5 @@ public interface ProxyClass {
 
     int doSomething(int num);
 
-    String test(String s);
+    void test(String s);
 }

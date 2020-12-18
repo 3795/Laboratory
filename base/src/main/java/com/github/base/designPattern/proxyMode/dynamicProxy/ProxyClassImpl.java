@@ -9,12 +9,12 @@ public class ProxyClassImpl implements ProxyClass {
 
     @Override
     public int doSomething(int num) {
-        System.out.println("方法执行中。。。。");
-        return num;
+        System.out.println("doSomething方法执行中，num = " + num);
+        return num + 100;
     }
 
     @Override
-    public String test(String s) {
-        return s;
+    public void test(String s) {
+        System.out.println("test方法执行中，s = " + s);
     }
 }
