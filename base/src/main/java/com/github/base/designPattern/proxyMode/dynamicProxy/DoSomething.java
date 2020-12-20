@@ -5,9 +5,7 @@ package com.github.base.designPattern.proxyMode.dynamicProxy;
  * Description: 代理接口
  * Created At 2018/11/07
  */
-public interface ProxyClass {
+public interface DoSomething {
 
     int doSomething(int num);
-
-    void test(String s);
 }

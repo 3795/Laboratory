@@ -10,6 +10,6 @@ public class Sing implements DoSomething {
     @Override
     public int doSomething(int num) {
         System.out.println("Sing a song");
-        return num;
+        return num * 10;
     }
 }

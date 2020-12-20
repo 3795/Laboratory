@@ -9,10 +9,10 @@ package com.github.base.designPattern.proxyMode.dynamicProxy;
 public class DynamicProxyDemo {
 
     public static void main(String[] args) {
-        ProxyClassImpl c = new ProxyClassImpl();
+        DoSomethingImpl c = new DoSomethingImpl();
         DynamicProxyHandler dynamicProxyHandler = new DynamicProxyHandler(c);
-        ProxyClass proxyClass = (ProxyClass) dynamicProxyHandler.newProxyInstance();
-//        System.out.println(proxyClass.getClass().getName());
-        System.out.println("返回结果为 " + proxyClass.doSomething(111));
+        DoSomething doSomething = (DoSomething) dynamicProxyHandler.newProxyInstance();
+        System.out.println("代理对象名称: " + doSomething.getClass().getName());
+        System.out.println("返回结果为 " + doSomething.doSomething(111));
     }
 }
