@@ -5,7 +5,8 @@ import com.github.base.designPattern.factoryMode.simpleFactoryMode.Operation;
 
 /**
  * Created By Q.Hao
- * Description: 测试工厂方法模式
+ * Description: 工厂方法模式
+ * 该模式使用不同的工厂产生不同的对象实例，可以扩展增加新的工厂
  * Created At 2019/7/7
  */
 public class client {

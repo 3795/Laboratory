@@ -9,6 +9,7 @@ public class BinarySearch {
 
     /**
      * 二分查找法经典实现
+     *
      * @param arr
      * @param target
      * @return
@@ -34,6 +35,7 @@ public class BinarySearch {
 
     /**
      * 二分查找法递归实现
+     *
      * @param arr
      * @param target
      * @return
@@ -44,6 +46,7 @@ public class BinarySearch {
 
     /**
      * 递归实现
+     *
      * @param arr
      * @param target
      * @param left
@@ -67,7 +70,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
-        System.out.println(search(arr,9));
+        System.out.println(search(arr, 9));
 
         System.out.println(recursiveSearch(arr, 9));
 

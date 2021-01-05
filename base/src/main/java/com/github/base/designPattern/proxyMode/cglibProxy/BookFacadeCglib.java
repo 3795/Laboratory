@@ -15,6 +15,12 @@ public class BookFacadeCglib implements MethodInterceptor {
 
     private Object target;
 
+    /**
+     * 创建代理对象
+     *
+     * @param target
+     * @return
+     */
     public Object getInstance(Object target) {
         this.target = target;
         Enhancer enhancer = new Enhancer();
@@ -26,6 +32,16 @@ public class BookFacadeCglib implements MethodInterceptor {
         return enhancer.create();
     }
 
+    /**
+     * 拦截器方法
+     *
+     * @param o
+     * @param method
+     * @param objects
+     * @param methodProxy
+     * @return
+     * @throws Throwable
+     */
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
         System.out.println("代理开始");
         methodProxy.invokeSuper(o, objects);

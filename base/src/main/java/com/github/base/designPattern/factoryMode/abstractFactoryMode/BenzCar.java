@@ -8,5 +8,5 @@ package com.github.base.designPattern.factoryMode.abstractFactoryMode;
 public interface BenzCar {
 
     // 加汽油
-    public void gasUp();
+    void gasUp();
 }

@@ -46,6 +46,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 返回二分搜索树中的节点个数
+     *
      * @return
      */
     public int size() {
@@ -54,6 +55,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 判断是否是一颗空树
+     *
      * @return
      */
     public boolean isEmpty() {
@@ -62,6 +64,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 向二分搜索树中插入一个节点
+     *
      * @param key
      * @param value
      */
@@ -71,6 +74,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 插入算法实现
+     *
      * @param node
      * @param key
      * @param value
@@ -78,7 +82,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
      */
     private Node insert(Node node, Key key, Value value) {
         if (node == null) {
-            count ++;
+            count++;
             return new Node(key, value);
         }
 
@@ -94,6 +98,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 判断树中是否有该节点
+     *
      * @param node
      * @param key
      * @return
@@ -114,6 +119,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 查找key对应的value
+     *
      * @param node
      * @param key
      * @return
@@ -123,16 +129,17 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
             return null;
         }
 
-        if( key.compareTo(node.key) == 0 )
+        if (key.compareTo(node.key) == 0)
             return node.value;
-        else if( key.compareTo(node.key) < 0 )
-            return search( node.left , key );
+        else if (key.compareTo(node.key) < 0)
+            return search(node.left, key);
         else // key > node->key
-            return search( node.right, key );
+            return search(node.right, key);
     }
 
     /**
      * 前序遍历
+     *
      * @param node
      */
     public void preOrder(Node node) {
@@ -145,6 +152,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 中序遍历
+     *
      * @param node
      */
     public void inOrder(Node node) {
@@ -187,6 +195,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 寻找二分搜索树中的最小值所在节点
+     *
      * @param node
      * @return
      */
@@ -199,6 +208,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
 
     /**
      * 寻找二分搜索树中的最大值所在节点
+     *
      * @param node
      * @return
      */
@@ -212,6 +222,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * 删除二分搜索树中的最小节点
      * 返回删除节点后新的二分搜索树的根
+     *
      * @param node
      * @return
      */
@@ -219,7 +230,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
         if (node.left == null) {
             Node rightNode = node.right;
             node.right = null;
-            count --;
+            count--;
             return rightNode;
         }
 
@@ -230,14 +241,15 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * 删除掉以node为根的二分搜索树中的最大节点
      * 返回删除节点后新的二分搜索树的根
+     *
      * @param node
      * @return
      */
-    public Node removeMax(Node node){
-        if( node.right == null ){
+    public Node removeMax(Node node) {
+        if (node.right == null) {
             Node leftNode = node.left;
             node.left = null;
-            count --;
+            count--;
             return leftNode;
         }
 
@@ -248,6 +260,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
     /**
      * 删除掉以node为根的二分搜索树中键值为key的节点
      * 返回删除节点后新的二分搜索树的根
+     *
      * @param node
      * @param key
      * @return
@@ -269,12 +282,12 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
             if (node.left == null) {
                 Node rightNode = node.right;
                 node.right = null;
-                count --;
+                count--;
                 return rightNode;
             }
 
             // 待删除节点右子树为空的情况
-            if( node.right == null ){
+            if (node.right == null) {
                 Node leftNode = node.left;
                 node.left = null;
                 count--;
@@ -291,7 +304,7 @@ public class BinarySearchTree<Key extends Comparable<Key>, Value> {
             successor.right = removeMin(node.right);
 
             node.left = node.right = null;
-            count --;
+            count--;
 
             return successor;
         }

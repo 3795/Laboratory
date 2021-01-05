@@ -10,6 +10,7 @@ import com.github.base.designPattern.factoryMode.simpleFactoryMode.OperationAdd;
  * Created At 2019/7/7
  */
 public class AddFactory implements IFactory {
+
     @Override
     public Operation CreateOption() {
         return new OperationAdd();

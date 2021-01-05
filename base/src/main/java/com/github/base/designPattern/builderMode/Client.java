@@ -2,7 +2,7 @@ package com.github.base.designPattern.builderMode;
 
 /**
  * Created By Q.Hao
- * Description:
+ * Description: 建造者模式
  * Created At 2019/7/7
  */
 public class Client {
