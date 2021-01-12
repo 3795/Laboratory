@@ -1,0 +1,14 @@
+server:
+  port: 7010
+spring:
+  application:
+    name: lab-user
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: UserModule
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka
