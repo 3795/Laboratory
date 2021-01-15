@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: lab-user
+  redis:
+    host: www.seven-io.top
+    port: 6379
+    password: RedisPassword
+    database: 0
 eureka:
   instance:
     hostname: localhost

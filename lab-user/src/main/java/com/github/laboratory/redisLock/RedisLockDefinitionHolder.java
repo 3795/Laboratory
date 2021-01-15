@@ -20,7 +20,7 @@ public class RedisLockDefinitionHolder {
     // 保存当前线程
     private Thread currentThread;
 
-    // 总共尝试次数
+    // 总共允许的尝试次数
     private int tryCount;
 
     // 当前尝试次数
