@@ -20,10 +20,10 @@ public class RedisLockDefinitionHolder {
     // 保存当前线程
     private Thread currentThread;
 
-    // 总共允许的尝试次数
+    // 总共允许的续时次数
     private int tryCount;
 
-    // 当前尝试次数
+    // 当前尝试的续时次数
     private int currentCount;
 
     // 更新锁的时间周期，防止业务时间过长导致锁过期，值 = 加锁时间 / 3

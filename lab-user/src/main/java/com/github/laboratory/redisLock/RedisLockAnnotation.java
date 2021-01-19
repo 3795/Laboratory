@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target({ElementType.METHOD, ElementType.TYPE})
 public @interface RedisLockAnnotation {
 
-    // 特定参数标识，，默认取第0个下标
+    // 特定参数标识，默认取第0个下标
     int lockField() default 0;
 
     // 超时重试次数
