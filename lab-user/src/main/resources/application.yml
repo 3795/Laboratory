@@ -3,6 +3,17 @@ server:
 spring:
   application:
     name: lab-user
+  datasource:
+    master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: DbPassword
+      jdbc-url: jdbc:mysql://www.seven-io.top:6306/laboratory?characterEncoding=utf-8
+    slave:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: DbPassword
+      jdbc-url: jdbc:mysql://www.seven-io.top:6307/laboratory?characterEncoding=utf-8   # 这个地方必须写成jdbc-url
   redis:
     host: www.seven-io.top
     port: 6379
