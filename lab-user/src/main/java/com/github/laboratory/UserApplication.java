@@ -7,7 +7,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableEurekaClient
-@MapperScan(value = "com.github.laboratory.*")      // 扫描mapper，不知道为啥默认扫描不到
+@MapperScan(value = "com.github.laboratory.*")
 public class UserApplication {
     public static void main(String[] args) {
         SpringApplication.run(UserApplication.class, args);
