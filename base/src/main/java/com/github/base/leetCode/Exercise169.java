@@ -22,7 +22,6 @@ public class Exercise169 {
         return major;
     }
 
-    //todo 求众数2：https://leetcode-cn.com/problems/majority-element-ii/
     public static void main(String[] args) {
         int[] arr = {2, 2, 1, 1, 1, 2, 2};
         System.out.println(new Exercise169().majorityElement(arr));
