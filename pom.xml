@@ -16,6 +16,7 @@
         <module>lab-eureka</module>
         <module>lab-netty</module>
         <module>lab-user</module>
+        <module>xxl-job</module>
     </modules>
 
     <parent>
