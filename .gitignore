@@ -26,3 +26,6 @@ hs_err_pid*
 /base/target/*
 */target/*
 /lab-user/src/test/
+/lab-eureka/lab-eureka.iml
+/lab-netty/lab-netty.iml
+/lab-user/lab-user.iml
