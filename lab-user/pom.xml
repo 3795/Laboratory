@@ -63,6 +63,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.github.3795</groupId>
+            <artifactId>lab-common</artifactId>
+            <version>1.0</version>
+        </dependency>
     </dependencies>
 
 </project>

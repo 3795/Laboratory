@@ -1,6 +1,7 @@
 package com.github.laboratory.controller;
 
 import com.github.laboratory.req.ValidateReq;
+import com.github.laboratory.vo.ServerResponseVO;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +20,7 @@ import javax.validation.Valid;
 public class ValidationController {
 
     @PostMapping
-    public String testValidate(@RequestBody @Valid ValidateReq validateReq) {
-        return validateReq.toString();
+    public ServerResponseVO testValidate(@RequestBody @Valid ValidateReq validateReq) {
+        return ServerResponseVO.success(validateReq);
     }
 }

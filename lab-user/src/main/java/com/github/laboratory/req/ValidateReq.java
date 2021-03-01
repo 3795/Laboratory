@@ -1,5 +1,6 @@
 package com.github.laboratory.req;
 
+import com.github.laboratory.annotation.CheckNumber;
 import lombok.Data;
 import lombok.ToString;
 
@@ -12,12 +13,24 @@ import javax.validation.constraints.NotNull;
  * @date 2021/2/24 11:25
  */
 @Data
-@ToString
 public class ValidateReq {
 
-    @NotEmpty(message = "姓名不能为空")
+    @NotEmpty(message = "username不能为空")
     private String username;
 
-    @NotNull(message = "状态不能为空")
-    private Integer statue;
+    @NotNull(message = "status不能为空")
+    private Integer status;
+
+    @CheckNumber(min = 0, max = 120, message = "age不合法")
+    @NotNull
+    private Integer age;
+
+    @Override
+    public String toString() {
+        return "ValidateReq{" +
+                "username='" + username + '\'' +
+                ", status=" + status +
+                ", age=" + age +
+                '}';
+    }
 }

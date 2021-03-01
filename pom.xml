@@ -17,6 +17,7 @@
         <module>lab-netty</module>
         <module>lab-user</module>
         <module>xxl-job</module>
+        <module>lab-common</module>
     </modules>
 
     <parent>
