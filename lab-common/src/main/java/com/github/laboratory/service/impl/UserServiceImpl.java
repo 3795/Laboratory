@@ -1,5 +1,6 @@
 package com.github.laboratory.service.impl;
 
+import com.github.laboratory.annotation.Read;
 import com.github.laboratory.entity.User;
 import com.github.laboratory.mapper.UserMapper;
 import com.github.laboratory.service.UserService;
@@ -25,6 +26,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     }
 
     @Override
+    @Read
     public List<User> findAll() {
         return this.list();
     }
