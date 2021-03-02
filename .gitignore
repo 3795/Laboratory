@@ -29,3 +29,8 @@ hs_err_pid*
 /lab-eureka/lab-eureka.iml
 /lab-netty/lab-netty.iml
 /lab-user/lab-user.iml
+/lab-common/lab-common.iml
+/xxl-job/xxl-job.iml
+/xxl-job/xxl-job-admin/xxl-job-admin.iml
+/xxl-job/xxl-job-core/xxl-job-core.iml
+/xxl-job/xxl-job-executor-samples/xxl-job-executor-samples.iml

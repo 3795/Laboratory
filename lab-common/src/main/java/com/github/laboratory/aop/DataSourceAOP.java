@@ -1,19 +1,20 @@
-package com.github.laboratory.readWrite.config;
+package com.github.laboratory.aop;
 
+import com.github.laboratory.config.readWrite.DynamicSwitchDbTypeUtil;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
 
-@Aspect
+//@Aspect
 @Component
 public class DataSourceAOP {
 
-    @Pointcut(value = "@annotation(com.github.laboratory.readWrite.config.Read)")
+    @Pointcut(value = "@annotation(com.github.laboratory.annotation.Read)")
     public void readPointcut() {
     }
 
-    @Pointcut("@annotation(com.github.laboratory.readWrite.config.Write)")
+    @Pointcut("@annotation(com.github.laboratory.annotation.Write)")
     public void writePointcut() {
     }
 

@@ -1,5 +1,6 @@
-package com.github.laboratory.readWrite.config;
+package com.github.laboratory.config.readWrite;
 
+import com.github.laboratory.enums.DbTypeEnum;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
@@ -10,7 +11,7 @@ import javax.sql.DataSource;
 import java.util.HashMap;
 import java.util.Map;
 
-@Configuration
+//@Configuration
 public class DataSourceConfig {
 
     /**

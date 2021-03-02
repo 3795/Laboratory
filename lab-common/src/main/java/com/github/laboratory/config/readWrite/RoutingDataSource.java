@@ -1,4 +1,4 @@
-package com.github.laboratory.readWrite.config;
+package com.github.laboratory.config.readWrite;
 
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 

@@ -1,5 +1,6 @@
-package com.github.laboratory.readWrite.config;
+package com.github.laboratory.config.readWrite;
 
+import com.github.laboratory.enums.DbTypeEnum;
 import lombok.extern.slf4j.Slf4j;
 
 /**

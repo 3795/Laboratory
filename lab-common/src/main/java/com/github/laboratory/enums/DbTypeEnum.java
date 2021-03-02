@@ -1,4 +1,4 @@
-package com.github.laboratory.readWrite.config;
+package com.github.laboratory.enums;
 
 /**
  * 数据库类型枚举

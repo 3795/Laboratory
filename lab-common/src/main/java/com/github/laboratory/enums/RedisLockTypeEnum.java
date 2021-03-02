@@ -1,6 +1,4 @@
-package com.github.laboratory.redisLock;
-
-import lombok.Data;
+package com.github.laboratory.enums;
 
 /**
  * Redis锁类型

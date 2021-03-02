@@ -1,5 +1,7 @@
-package com.github.laboratory.redisLock;
+package com.github.laboratory.aop;
 
+import com.github.laboratory.annotation.RedisLock;
+import com.github.laboratory.enums.RedisLockTypeEnum;
 import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
@@ -77,7 +79,7 @@ public class RedisLockAspect {
     /**
      * 拦截特定注解
      */
-    @Pointcut(value = "@annotation(com.github.laboratory.redisLock.RedisLockAnnotation)")
+    @Pointcut(value = "@annotation(com.github.laboratory.annotation.RedisLock)")
     public void redisLockPC() {
 
     }
@@ -99,7 +101,7 @@ public class RedisLockAspect {
         System.out.println("进入切面时间" + System.currentTimeMillis());
         // 解析参数
         Method method = resolveMethod(pjp);
-        RedisLockAnnotation annotation = method.getAnnotation(RedisLockAnnotation.class);
+        RedisLock annotation = method.getAnnotation(RedisLock.class);
         RedisLockTypeEnum typeEnum = annotation.typeEnum();
         Object[] params = pjp.getArgs();
 

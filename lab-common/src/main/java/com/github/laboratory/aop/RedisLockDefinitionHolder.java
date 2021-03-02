@@ -1,4 +1,4 @@
-package com.github.laboratory.redisLock;
+package com.github.laboratory.aop;
 
 import lombok.Data;
 
