@@ -18,6 +18,7 @@
         <module>lab-user</module>
         <module>xxl-job</module>
         <module>lab-common</module>
+        <module>laboratory-auth</module>
     </modules>
 
     <parent>

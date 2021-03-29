@@ -1,12 +1,12 @@
 server:
-  port: 7010
+  port: 7011
 spring:
   application:
-    name: lab-user
+    name: lab-auth
 eureka:
   instance:
     hostname: localhost
-    instance-id: UserModule
+    instance-id: AuthModule
     prefer-ip-address: true
   client:
     fetch-registry: true
