@@ -1,5 +1,7 @@
 package com.github.laboratory.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.github.laboratory.entity.User;
 import com.github.laboratory.mapper.UserMapper;
@@ -27,5 +29,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Override
     public List<User> findAll() {
         return this.list();
+    }
+
+    @Override
+    public User getByUsername(String username) {
+        LambdaQueryWrapper<User> queryWrapper = Wrappers.lambdaQuery();
+        queryWrapper.eq(User::getUsername, username);
+        return this.getOne(queryWrapper);
     }
 }

@@ -29,4 +29,12 @@ public interface UserService extends IService<User> {
      * @return
      */
     List<User> findAll();
+
+    /**
+     * 根据username查找
+     *
+     * @param username
+     * @return
+     */
+    User getByUsername(String username);
 }

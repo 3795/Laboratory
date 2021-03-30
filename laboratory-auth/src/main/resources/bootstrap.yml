@@ -1,0 +1,23 @@
+server:
+  port: 7011
+spring:
+  application:
+    name: lab-auth
+  cloud:
+    nacos:
+      config:
+        server-addr: www.seven-io.top:8848
+        file-extension: yaml
+        namespace: laboratory
+        extension-configs:
+          - data-id: mysql.yaml
+          - data-id: redis.yaml
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: AuthModule
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    service-url:
+      defaultZone: http://127.0.0.1:7000/eureka
