@@ -21,7 +21,6 @@ public interface UserService extends IService<User> {
      *
      * @param user
      */
-//    @Write
     void add(User user);
 
     /**
@@ -29,6 +28,5 @@ public interface UserService extends IService<User> {
      *
      * @return
      */
-//    @Read
     List<User> findAll();
 }
