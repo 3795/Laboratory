@@ -1,5 +1,6 @@
 package com.github.laboratory.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
@@ -25,6 +26,7 @@ public class User implements Serializable {
     /**
      * 用户id
      */
+    @TableId
     private Long id;
 
     /**
@@ -41,11 +43,5 @@ public class User implements Serializable {
      * 用户姓名
      */
     private String fullname;
-
-    /**
-     * 手机号
-     */
-    private String mobile;
-
 
 }
