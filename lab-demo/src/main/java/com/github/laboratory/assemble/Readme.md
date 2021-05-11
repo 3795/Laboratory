@@ -1,0 +1,1 @@
+本Demo展示@EnableXXX注解配合@Import注解实现手动装配Bean

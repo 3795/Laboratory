@@ -14,7 +14,7 @@
     <modules>
         <module>base</module>
         <module>lab-eureka</module>
-        <module>lab-netty</module>
+        <module>lab-demo</module>
         <module>lab-user</module>
         <module>xxl-job</module>
         <module>lab-common</module>
