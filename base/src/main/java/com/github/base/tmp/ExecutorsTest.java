@@ -25,21 +25,21 @@ public class ExecutorsTest {
         executor.execute(() -> {
             sayHi("execute");
         });
-//        Thread.sleep(100);
+        Thread.sleep(100);
         executor.execute(() -> {
             sayHi("execute");
         });
-//        Thread.sleep(100);
+        Thread.sleep(100);
 
         executor.execute(() -> {
             sayHi("execute-exception");
         });
-//        Thread.sleep(100);
+        Thread.sleep(100);
 
         executor.execute(() -> {
             sayHi("execute");
         });
-//        Thread.sleep(100);
+        Thread.sleep(100);
 
         executor.execute(() -> {
             sayHi("execute");
