@@ -1,5 +1,6 @@
-package com.github.base.designPattern.ruleActuator.base;
+package com.github.base.designPattern.ruleActuator;
 
+import com.github.base.designPattern.ruleActuator.base.RuleDto;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

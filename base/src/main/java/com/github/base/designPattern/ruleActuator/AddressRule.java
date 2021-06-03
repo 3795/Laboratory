@@ -1,4 +1,7 @@
-package com.github.base.designPattern.ruleActuator.base;
+package com.github.base.designPattern.ruleActuator;
+
+import com.github.base.designPattern.ruleActuator.base.AbstractRule;
+import com.github.base.designPattern.ruleActuator.base.RuleDto;
 
 /**
  * Description: 地址规则
@@ -11,7 +14,6 @@ public class AddressRule extends AbstractRule {
 
     @Override
     public boolean execute(RuleDto ruleDto) {
-        System.out.println("进行地区判断");
         return BEI_JING.equals(ruleDto.getAddress());
     }
 }

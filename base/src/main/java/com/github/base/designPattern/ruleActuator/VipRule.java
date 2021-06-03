@@ -1,11 +1,13 @@
-package com.github.base.designPattern.ruleActuator.base;
+package com.github.base.designPattern.ruleActuator;
+
+import com.github.base.designPattern.ruleActuator.base.AbstractRule;
+import com.github.base.designPattern.ruleActuator.base.RuleDto;
 
 /**
- * Description: 北京地区且年满18岁，则为vip，反之不为vip
+ * Description: 年满18岁，则为vip，反之不为vip
  * Created At 2021/6/1
  */
 public class VipRule extends AbstractRule {
-
 
     @Override
     protected <T> T convert(RuleDto dto) {
@@ -20,7 +22,6 @@ public class VipRule extends AbstractRule {
 
     @Override
     protected <T> boolean executeRule(T t) {
-        System.out.println("进行Vip身份判断");
         VipRuleDto dto = (VipRuleDto) t;
         return dto.isVip();
     }
