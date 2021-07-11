@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="demo" class="com.github.laboratory.bean.Person">
+        <property name="age" value="10"/>
+        <property name="name" value="xiaoMing"/>
+    </bean>
+
+    <bean id="demoFromFactory" class="com.github.laboratory.bean.PersonFactoryBean">
+        <property name="initStr" value="10,init from factory"/>
+    </bean>
+</beans>

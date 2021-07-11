@@ -1,0 +1,1 @@
+测试BeanFactory和FactoryBean
