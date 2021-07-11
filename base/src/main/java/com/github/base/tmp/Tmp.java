@@ -8,7 +8,25 @@ import org.openjdk.jol.info.ClassLayout;
 public class Tmp {
 
     public static void main(String[] args) {
-        Object object = new Object();
-        System.out.println(ClassLayout.parseInstance(object).toPrintable());
+        System.out.println("父类引用指向子类");
+        Father instance = new Son();
+        instance.printValue();
+        instance.printValue2();
+        System.out.println(instance.name);
+        instance.printValue3();
+
+        System.out.println("父类对象");
+        Father father = new Father();
+        father.printValue();
+        father.printValue2();
+        System.out.println(father.name);
+        father.printValue3();
+
+        System.out.println("子类对象");
+        Son son = new Son();
+        son.printValue();
+        son.printValue2();
+        System.out.println(son.name);
+        son.printValue3();
     }
 }
