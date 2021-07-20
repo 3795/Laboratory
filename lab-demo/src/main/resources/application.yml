@@ -1,0 +1,13 @@
+server:
+  port: 7002
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  shardingsphere:
+    props:
+      sql:
+        show: true  # 显示sql
+    datasource:
+      names: ds1, ds2
+
+# master-ds1数据连接信息

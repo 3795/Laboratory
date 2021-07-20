@@ -10,7 +10,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class Main {
     public static void main(String[] args) {
         // 获取BeanFactory
-        BeanFactory beanFactory = new ClassPathXmlApplicationContext("application.xml");
+        BeanFactory beanFactory = new ClassPathXmlApplicationContext("applicationBean.xml");
         // 获取对应的实例化对象
         Object demo = beanFactory.getBean("demo");
         System.out.println(demo instanceof Person);
